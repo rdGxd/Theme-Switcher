@@ -1,4 +1,9 @@
 @charset "UTF-8";
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
 
 :root {
   --dark: #292c35;
@@ -7,29 +12,30 @@
 }
 
 main {
-  margin-top: 20%;
-  width: 100%;
-  height: 100%;
+  background-color: black;
   display: flex;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
+  align-items: center;
+  transition: all 1s ease-out;
 }
 
 div {
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: var(--label);
   border-radius: 3.68rem;
+  padding: 10px;
 }
 
-img {
-  width: 4.9rem;
-  height: 4.9rem;
-}
-
+img,
 input {
-  width: 5.3rem;
-  height: 5.3rem;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .hidden {
@@ -41,12 +47,4 @@ input {
 }
 #white {
   background-color: var(--light);
-}
-
-#darkTheme {
-  margin-right: 2.93rem;
-}
-
-#lightTheme {
-  margin-left: 2.93rem;
 }

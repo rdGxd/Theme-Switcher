@@ -2,16 +2,16 @@ const black = document.querySelector("#darkTheme");
 const white = document.querySelector("#lightTheme");
 const imgNoite = document.querySelector("#lua");
 const imgDia = document.querySelector("#sol");
-const body = document.querySelector("body");
+const main = document.querySelector("main");
 
 // Evento para escutar qual cor foi clicada
 black.addEventListener("click", noite);
 white.addEventListener("click", dia);
 
-// Coloca a cor black no background do body
+// Acrescentar a cor black no background do main
 function noite() {
-  // Coloca uma ID no body para escurecer
-  body.setAttribute("id", "black");
+  // Coloca uma ID no main para escurecer
+  main.setAttribute("id", "black");
 
   // Esconde a opção dark já que ela já foi escolhida
   black.classList.add("hidden");
@@ -26,10 +26,10 @@ function noite() {
   white.classList.remove("hidden");
 }
 
-// Coloca a cor white no background do body
+// Acrescentar a cor white no background do main
 function dia() {
-  // Coloca uma ID no body para clarear
-  body.setAttribute("id", "white");
+  // Coloca uma ID no main para clarear
+  main.setAttribute("id", "white");
 
   // Esconde a opção white já que ela já foi escolhida
   white.classList.add("hidden");
@@ -43,22 +43,3 @@ function dia() {
   // Mostra a opção do black
   black.classList.remove("hidden");
 }
-
-/*
-function noite() {
-  body.setAttribute("id", "black") body.style.backgroundColor = "#292c35";
-  black.style.display = "none";
-  imgNoite.style.display = "flex";
-  white.style.display = "flex";
-  imgDia.style.display = "none";
-  imgNoite.classList.remove("hidden")
-}
-
-function dia() {
-  body.setAttribute("id", "white") //body.style.backgroundColor = "#f1f1f1";
-  white.style.display = "none";
-  imgNoite.style.display = "none";
-  black.style.display = "flex";
-  imgDia.style.display = "flex";
-}
-*/
